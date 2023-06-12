@@ -75,20 +75,64 @@ function toggleMobileMenu() {
   mobileMenu.classList.toggle('active')
 }
 
+//header-touch-swipe
+function hedearMobileSwipeClose() {
+  const headerMobile = document.querySelector('.header-m')
+  const headerMobileContent = headerMobile.querySelector('.header-m__content')
 
 
+  headerMobileContent.addEventListener('touchstart', handleTouchStart, false);
+  headerMobileContent.addEventListener('touchmove', handleTouchMove, false);
+  
+  let xDown = null;
+  let yDown = null;
+  
+  function handleTouchStart(evt) {
+      xDown = evt.touches[0].clientX;
+      yDown = evt.touches[0].clientY;
+  };
+  
+  function handleTouchMove(evt) {
+      if ( ! xDown || ! yDown ) {
+          return;
+      }
+  
+      let xUp = evt.touches[0].clientX;
+      let yUp = evt.touches[0].clientY;
+  
+      let xDiff = xDown - xUp;
+      let yDiff = yDown - yUp;
+      if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+          if ( xDiff > 0 ) {
+            headerMobile.classList.remove('active')
+            for (let i = 0; i < headerMenuBtn.length; i++) {
+              headerMenuBtn[i].classList.toggle('open')
+            }
+            bodyScrollLock.enableBodyScroll(headerMobile);
+          } else {
+          }
+      } else {
+          if ( yDiff > 0 ) {
+          } else {
+          }
+      }
+      xDown = null;
+      yDown = null;
+  
+  };
+}
+hedearMobileSwipeClose()
 //открытие link_hidden в хедере меню
 
 if(document.querySelectorAll('[open-for]').length) {
   let openLink = document.querySelectorAll('[open-for]')
   for(let i = 0; i<openLink.length; i++) {
     openLink[i].addEventListener('click', function(e) {
+      let id = this.getAttribute('open-for')
+      let hiddenBlock = document.querySelector(`[open-id=${id}]`)
+      hiddenBlock.classList.toggle('active')
       if(window.innerWidth <= 1023) {
         e.preventDefault()
-        let id = this.getAttribute('open-for')
-        console.log(id)
-        let hiddenBlock = document.querySelector(`[open-id=${id}]`)
-        hiddenBlock.classList.toggle('active')
       }
     })
   }
@@ -290,4 +334,49 @@ if(document.querySelectorAll('.lang').length) {
   const langBtn = lang.querySelector('.lang__top')
 
   langBtn.onclick = () => lang.classList.toggle('active')
+}
+
+// analytics смена активного блока 
+
+if(document.querySelectorAll('[analytics-btn]').length) {
+  let analyticsBtn = document.querySelectorAll('[analytics-btn]')
+  let analyticsBlock = document.querySelectorAll('[analytics-block-id]')
+  for(let i = 0; i< analyticsBtn.length; i++) {
+    analyticsBtn[i].addEventListener('click', function(e) {
+      let id = this.getAttribute('analytics-btn')
+      let idBlock = document.querySelector(`[analytics-block-id=${id}]`)
+      changerActive(analyticsBlock)
+      changerActive(analyticsBtn)
+      idBlock.classList.add('active')
+      this.classList.add('active')
+    })
+  }
+}
+
+
+//selector
+
+if(document.querySelectorAll('.selector').length) {
+  const selectorsBlock = document.querySelectorAll('.selector')
+  const selectorSubtitle = document.querySelectorAll('.selector__subtitle')
+  const selectorClose = document.querySelectorAll('.selector__close')
+
+  selectorSubtitle.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const selector = btn.closest('.selector')
+      if(selector.classList.contains('active')) {
+        changerActive(selectorsBlock)
+      } else {
+        changerActive(selectorsBlock)
+        selector.classList.add('active')
+      }
+    })
+  });
+
+  selectorClose.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const selector = btn.closest('.selector')
+      selector.classList.remove('active')
+    })
+  });
 }

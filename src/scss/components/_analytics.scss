@@ -1,0 +1,96 @@
+.analytics {
+    padding-bottom: 100px;
+    @media(max-width:1023px) {
+        padding-bottom: 60px;
+    }
+    @media(max-width:767px) {
+        padding-bottom: 40px;
+    }
+    @media(max-width:539px) {
+        padding-bottom: 0px;
+    }
+    &__header {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__header-btn {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.002em;
+        color: var(--var-header-text);
+        &.active {
+            background: #4B7AA9;
+            box-shadow: 2px 2px 6px 2px rgba(1, 69, 134, 0.04);
+            border-radius: 6px;
+            color: #fff;
+        }
+    }
+
+    &__content {
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        display: none;
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__item {
+        flex: 0 0 calc(25% - 12px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 21px 20px 42px;
+        justify-content: space-between;
+        @media(max-width:940px) {
+            flex: 0 0 calc(33.33% - 10.7px);
+        }
+        @media(max-width:767px) {
+            flex: 0 0 calc(50% - 8px);
+        }
+        @media(max-width:539px) {
+            padding: 26px 8px 20px;
+        }
+    }
+    &__item-btn {
+        background: #6E9ECB;
+        border-radius: 41px;
+        width: 100%;
+        max-width: 188px;
+        text-align: center;
+        @media(max-width:539px) {
+            font-size: 12px;
+            line-height: 14px;
+            padding: 10px 5px;
+        }
+    }
+    &__item-pic {
+        margin-bottom: 18px;
+        max-height: 85px;
+        max-width: 85px;
+        @media(max-width:539px) {
+            max-width: 65px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+}
+[dark] {
+    & .analytics {
+        &__header-btn {
+            &.active {
+                background: #32679b;
+            }
+        }
+        &__item-btn {
+            background: #32679b;
+        }
+    }
+
+}
