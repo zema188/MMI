@@ -1,3 +1,3 @@
-# avtoSalon
+# MMI
 npm i
 gulp
