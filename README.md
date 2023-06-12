@@ -1,0 +1,3 @@
+# avtoSalon
+npm i
+gulp

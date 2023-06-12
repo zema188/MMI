@@ -1,0 +1,102 @@
+:root {
+    //ТЕКСТ
+    // текст в хедере
+    --var-header-text: #726F7B;
+    //активная ссылка
+    --var-header-text-active: #FFFFFF;
+
+
+    //основной текст
+    --var-body-text: rgba(47, 43, 61, 0.7);
+
+    //основной текст заголовки 
+    --var-body-title: #2F2B3D;
+
+
+    //серый текст 
+
+    //серый заголовки 
+    --var-title-grey: #5D5A68;
+
+    //серый подзаголовки 
+    --var-subtitle-grey: #9C9AA3;
+
+    //серые lead
+    --var-lead-grey: rgba(93, 90, 104, 0.8);
+
+
+    //футер СИНИЙ текст
+    
+    --var-lead-blue: #32679B;
+
+
+    //ФОН
+    //фон страницы
+    --var-body-bg: rgba(248,247,250,1);
+    
+    //фон блока
+    --var-block-bg: rgba(255,255,255,0.8);
+
+    //фон хедера
+    --var-header-bg: rgba(255, 255, 255, 0.93);
+
+    --var-red: #EA5455;
+
+    //синий фон
+    --var-blue-bg: rgba(0, 67, 131, 0.8);
+    //SVG
+
+    --var-svg-grey: #726F7B;
+
+
+    //BORDER
+    --var-border-grey: #DDDCE0;
+}
+
+[dark] {
+    // текст в хедере
+    --var-header-text: #D0D4F1;
+
+    //активная ссылка
+    --var-header-text-active: #FFFFFF;
+
+
+    //основной текст
+    --var-body-text: rgba(208, 212, 241, 0.7);
+
+    //основной текст заголовки 
+    --var-body-title: #D0D4F1;
+
+
+    //серый заголовки 
+    --var-title-grey: #D0D4F1;
+
+    //серый подзаголовки 
+    --var-subtitle-grey: rgba(208, 212, 241, 0.8);
+
+    //серые lead
+    --var-lead-grey: rgba(208, 212, 241, 0.6);
+
+    //футер СИНИЙ текст
+
+    --var-lead-blue: #308EEB;
+
+
+    //фон страницы
+    --var-body-bg: rgba(38,42,61,1);
+
+    //фон блока
+    --var-block-bg: #2E3248;
+
+    //фон хедера
+    --var-header-bg: rgba(46, 50, 72, 0.8);
+
+    //синий фон
+    --var-blue-bg: #004383;
+
+    //SVG
+    --var-svg-grey: #D0D4F1;
+
+    //BORDER
+    --var-border-grey: rgba(208, 212, 241, 0.7);
+}

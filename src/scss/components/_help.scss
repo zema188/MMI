@@ -1,0 +1,29 @@
+.dashboard {    
+    &__help {
+        margin-top: 21px;
+    }
+}
+.help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 31px 29px;
+    @media(max-width:539px) {
+        padding: 20px;
+
+    }
+    & img {
+    }
+    &__pic {
+        & img {
+            width: 100%;
+        }
+    }
+    &__btn {
+        white-space: nowrap;
+        @media(max-width:539px) {
+            padding: 10px 14px;
+        }
+    }
+}
