@@ -1,0 +1,88 @@
+.svg-w {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    &.border-4 {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        border-radius: 4px;
+        @media (max-width: 767px) {
+            width: 17px;
+            height: 17px;
+            min-width: 17px;
+            min-height: 17px;
+        }
+        & svg {
+            @media (max-width: 767px) {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+    &.border-circle {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        min-height: 34px;
+        border-radius: 50%;
+    }
+
+    &.bg-purple {
+        background: var(--var-svg-purple-bg);
+    }
+    &.svg-purple {
+        & svg {
+            path {
+                stroke: var(--var-svg-purple);  
+                fill: transparent;
+            }
+        }
+    }
+
+    &.bg-green {
+        background: var(--var-svg-green-bg);
+    }
+    &.svg-green {
+        & svg {
+            path {
+                stroke: var(--var-svg-green);   
+                fill: transparent;
+            }
+        }
+    }
+    
+    &.bg-orange {
+        background: var(--var-svg-orange-bg);
+    }
+    &.svg-orange {
+        & svg {
+            path {
+                stroke: var(--var-svg-orange);
+                fill: transparent;
+            }
+        }
+    }
+
+    &.bg-lilac {
+        background: var(--var-svg-lilac-bg);
+    }
+    &.svg-grey-dark {
+        & svg {
+            path {
+                stroke: var(--var-svg-grey-dark);   
+                fill: transparent;
+            }
+        }
+    }
+
+    
+    &.bg-blue {
+        background: var(--var-svg-blue-bg);
+    }
+}

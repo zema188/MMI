@@ -56,11 +56,33 @@
 
     //фиолетовый фон
     --var-purple-bg: #E6EAFF;
+    
     //SVG
 
+    //фиолетовый svg
+    //фиолетовыйфон для svg
+    --var-svg-purple-bg: #EAE7FF;
+    --var-svg-purple: rgba(128, 117, 221, 1);
+
+    //оранжевый svg
+    //оранжевый фон для svg
+    --var-svg-orange-bg: #FFF1E4;
+    --var-svg-orange: rgba(254, 153, 71, 1);
+
+    //зеленый svg
+    //зеленый фон для svg
+    --var-svg-green-bg: #E2F6EA;
+    --var-svg-green: rgba(73, 181, 123, 1);
+
+    //серый svg
+    //сиреневый фон для svg
+    --var-svg-lilac-bg: #F1F1FF;
+    --var-svg-grey-dark: rgba(151, 151, 151, 1);
+
+    //голубой фон для svg
+    --var-svg-blue-bg: #E6EAFF;
+
     --var-svg-grey: #726F7B;
-
-
     //BORDER
     --var-border-grey: #DDDCE0;
 
@@ -114,6 +136,30 @@
     --var-blue-bg: #004383;
 
     //SVG
+
+    //фиолетовый svg
+    //фиолетовыйфон для svg
+    --var-svg-purple-bg: #393B63;
+    --var-svg-purple: rgba(128, 117, 221, 1);
+
+    //оранжевый svg
+    //оранжевый фон для svg
+    --var-svg-orange-bg: #504448;
+    --var-svg-orange: rgba(254, 153, 71, 1);
+
+    //зеленый svg
+    //зеленый фон для svg
+    --var-svg-green-bg: #2D4B4F;
+    --var-svg-green: rgba(73, 181, 123, 1);
+
+    //серый svg
+    //сиреневый фон для svg
+    --var-svg-lilac-bg: #424659;
+    --var-svg-grey-dark: rgba(151, 151, 151, 1);
+
+    //голубой фон для svg
+    --var-svg-blue-bg: #e6eaffbf;
+
     --var-svg-grey: #D0D4F1;
 
     //BORDER
@@ -140,4 +186,13 @@
 
     // INPUT PLACEHOLDER
     --var-placeholder-grey: #BEBDBF;
+
+    //фиолетовый svg
+    --var-svg-purple: rgba(128, 117, 221, 1);
+
+    //оранжевый svg
+    --var-svg-purple: rgba(128, 117, 221, 1);
+
+    //зеленый svg
+    --var-svg-purple: rgba(128, 117, 221, 1);
 }

@@ -73,3 +73,8 @@
     max-width: 18px;
     max-height: 18px;
 }
+[dark] {
+    .custom-checkbox {
+        background: var(--var-svg-grey)
+    }
+}
