@@ -1,0 +1,180 @@
+.table-w {
+    padding: 34px 0px 80px;
+    @media(max-width:767px) {
+        padding: 0 0 20px;
+    }
+}
+.table-overflow {
+    overflow: auto;
+}
+.table {
+    border: 0.7px solid var(--var-border-grey);
+    width: 100%;
+	border-collapse:collapse;
+	border-spacing:0;
+	height: auto;
+    
+    & td {
+        padding: 17px 15px;
+        border: 0.7px solid var(--var-border-grey);
+        @media(max-width:767px) {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+        }
+        &.input {
+            padding: 6px;
+        }
+        &.blue {
+            color: var(--var-lead-blue);
+        }
+        &.underline {
+            text-decoration: underline;
+        }
+        &.center {
+            text-align: center;
+        }
+        & span {
+            white-space: nowrap;
+        }
+        & svg {
+            cursor: pointer;
+        }
+    }
+    &_goods {
+        & td {
+            padding: 17px 30px;
+        }
+    }
+    &_categories {
+
+        & .table__subtitle {
+            @media(min-width:768px) {
+                & td {
+                    &:first-child {
+                        width: 42px;
+                        text-align: center;
+                        padding: 22px 24px;
+                    }
+                    &:nth-child(2) {
+                        width: 399px;
+                        padding: 22px 15px;
+                    }
+                    &:nth-child(4) {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+        & td {
+            &:first-child {
+                text-align: center;
+            }
+            &:nth-child(3) {
+                white-space: nowrap;
+            }
+            &:nth-child(4) {
+                text-align: center;
+                & svg {
+                    & path {
+                    }
+                    & line {
+                    }
+                }
+            }
+            @media(min-width:768px) {
+                padding: 12px 34px;
+                font-size: 14px;
+                &:first-child {
+                    width: 42px;
+                    text-align: center;
+                    padding: 12px 24px;
+                }
+                &:nth-child(2) {
+                    width: 399px;
+                    padding: 12px 15px;
+                }
+
+                &:nth-child(4) {
+                    width: 80px;
+                    & svg {
+                        @media(max-width:767px) {
+                            width: 14px;
+                            height: 13px;
+                        }
+                    }
+                }
+            }
+            @media(max-width:767px) {
+                padding: 12px 13px;
+                &:nth-child(4) {
+                    & svg {
+                        width: 14px;
+                        height: 13px;
+                    }
+                }
+            }
+        }
+    }
+    & input {
+        border: 0.7px solid var(--var-border-grey);
+        padding: 9px 20px 9px 10px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: var(--var-body-title);
+        @media(max-width:767px) {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    &__btn {
+        padding: 13px 54px;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        &_pc {
+            margin-left: auto;
+            margin-right: 30px;
+            margin-bottom: 26px;
+            @media(max-width:767px) {
+                display: none;
+            }
+        }
+        &_mobile {
+            display: none;
+            margin: 20px auto 0;
+            max-width: 400px;
+            @media(max-width:767px) {
+                display: flex;
+            }
+            @media(max-width:539px) {
+                width: 100%;
+                max-width: none;
+            }
+        }
+    }
+}
+.td {
+    &_250 {
+        width: 250px;
+    }
+}
+.btn-table-add {
+    padding: 15px 72px;
+    margin-left: auto;
+    margin-top: 25px;
+    @media(max-width:1023px) {
+        margin-left: 0;
+    }
+    @media(max-width:539px) {
+        width: 100%;
+        padding: 15px 10px;
+        margin-top: 30px;
+    }
+}

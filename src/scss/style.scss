@@ -122,7 +122,19 @@ body {
     }
   }
 }
-
+input {
+  background: 0 0;
+  width: 100%;
+  color: var(--var-lead-grey);
+  font-size: 14px;
+  line-height: 16px;
+  &::placeholder {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: var(--var-placeholder-grey);
+}
+}
 .btn {
   display: flex;
   justify-content: center;

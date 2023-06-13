@@ -1,6 +1,32 @@
 .selector {
     position: relative;
     margin-bottom: 17px;
+    background: transparent;
+    width: 100%;
+    &_table {
+        &.selector.active_orange .selector__subtitle {
+            padding: 9px 20px 9px 10px;
+            background: transparent;
+            border: none;
+            color: var(--var-orange);
+            &::after {
+                background: url(../img/icons/selector-arrow.svg) 0 0 no-repeat;
+
+            }
+        }
+        border: 0.7px solid var(--var-border-grey);
+        & .selector__content  {
+            position: static;
+            box-shadow: none;
+            padding: 0px 0 15px 10px;
+        }
+        & .selector__list {
+            height: auto;
+            max-height: none;
+            overflow: auto;
+            padding-right: 13px;
+        }
+    }
     &.active {
         & .selector__content {
             display: block;
@@ -29,13 +55,14 @@
     }
     & svg {
         width: 17px;
+        height: 17px;
         & path {
             fill: var(--var-svg-grey);
         }
     }
     &__subtitle {
         background: var(--var-block-bg);
-        border: 0.6px solid var(--var-border-grey);
+        border: 0.6px solid var(--var-border-input);
         color: var(--var-lead-grey);
         border-radius: 6px;
         font-weight: 600;
@@ -88,6 +115,13 @@
             margin-bottom: 10px;
         }
     }
+    &_profile {
+        margin-bottom: 0;
+        display: none;
+        @media (max-width: 1023px) {
+            display: block;
+        }
+    }
 }
 .selector-close {
 }
@@ -99,10 +133,22 @@
         background: #3d4158;
     }
     .selector {
+        &.selector.active_orange .selector__subtitle {
+            &::after {
+                background: url(../img/icons/selector-arrow_dark.svg) 0 0 no-repeat;
+
+            }
+        }
         &__subtitle {
             &::after {
             background: url(../img/icons/selector-arrow_dark.svg) 0 0 no-repeat;
             }
         }
+        &_table {
+            & .selector__content {
+                background: transparent;
+            }
+        }
     }
+
 }
