@@ -36,6 +36,8 @@
     
     --var-lead-blue: #32679B;
 
+    //фиолетовый текст
+    --var-purple-text: #494DB5;
 
     //ФОН
     //фон страницы
@@ -51,6 +53,9 @@
 
     //синий фон
     --var-blue-bg: rgba(0, 67, 131, 0.8);
+
+    //фиолетовый фон
+    --var-purple-bg: #E6EAFF;
     //SVG
 
     --var-svg-grey: #726F7B;
@@ -58,6 +63,13 @@
 
     //BORDER
     --var-border-grey: #DDDCE0;
+
+
+    // INPUT BORDER
+    --var-border-input: rgba(93, 90, 104, 0.5);
+
+    // INPUT PLACEHOLDER
+    --var-placeholder-grey: #BEBDBF;
 }
 
 [dark] {
@@ -106,4 +118,26 @@
 
     //BORDER
     --var-border-grey: rgba(208, 212, 241, 0.7);
+
+    // INPUT BORDER
+    --var-border-input: rgba(208, 212, 241, 0.7);
+
+
+    //оранжевый цвет
+
+    --var-orange: rgba(254, 153, 71, 1);
+
+    //оранжевый фон 
+
+    --var-orange-bg: #504448;
+
+    //фиолетовый текст
+    --var-purple-text: rgba(128, 117, 221, 1);
+
+    
+    //фиолетовый фон
+    --var-purple-bg: #393B63;
+
+    // INPUT PLACEHOLDER
+    --var-placeholder-grey: #BEBDBF;
 }

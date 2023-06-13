@@ -1,0 +1,54 @@
+.news {
+
+    &__card {
+        margin-top: 21px;
+        display: block;
+        padding: 30px;
+        @media(max-width:1023px) {
+            padding: 20px 30px 20px 20px;
+        }
+        & p {
+            font-size: 13px;
+            line-height: 144%;
+            letter-spacing: 0.02em;
+            color: var(--var-lead-grey);
+            max-width: 1046px;
+
+        }
+    }
+
+    &__card-date {
+        background: var(--var-orange-bg);
+        color: var(--var-orange);
+        display: inline-block;
+        padding: 4px 6px 6px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    &__card-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: var(--var-lead-blue);
+        margin-top: 12px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        @media(max-width:539px) {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__hashtags-list {
+        margin-top: 14px;
+    }
+    &__card-lead {
+        margin-bottom: 25px;
+    }
+}

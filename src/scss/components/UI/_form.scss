@@ -1,0 +1,89 @@
+.form {
+    &__field {
+            background: transparent;
+            border-bottom: 0.8px solid var(--var-border-input);
+            padding-bottom: 9px;
+            width: 100%;
+            color: var(--var-lead-grey);
+            margin-bottom: 14px;
+            font-size: 14px;
+            line-height: 16px;
+            @media(max-width:1023px) {
+                border: 0.8px solid var(--var-border-input);
+                border-radius: 6px;
+                padding: 15px;
+            }
+            &::placeholder {
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.02em;
+                color: var(--var-placeholder-grey);
+                @media(max-width:1023px) {
+                    opacity: 0;
+                }
+            }
+        &_file {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 13px;
+            color: var(--var-body-text);
+            @media(max-width:1023px) {
+                gap: 17px;
+            }
+            & .btn {
+                font-size: 11px;
+                line-height: 13px;
+                padding: 8px 24px;
+            }
+            & input {
+                display: none;
+            }
+        }
+        &_textarea {
+            height: 77px;
+            resize: none;
+            margin-bottom: 10px;
+            @media(max-width:1023px) {
+                height: 100px;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: var(--var-placeholder-grey);
+        margin-bottom: 11px;
+        @media(max-width:1023px) {
+            margin-bottom: 8px;
+            color: rgba(93, 90, 104, 0.8);
+        }
+        @media(max-width:539px) {
+            font-size: 12px;
+            line-height: 140.5%;
+        }
+        &_mobile {
+            display: none;
+            @media(max-width:1023px) {
+                display: block;
+            }
+        }
+    }
+    &__btn-send {
+        margin-top: 43px;
+        @media(max-width:539px) {
+            width: 100%;
+            margin-top: 19px;
+            padding: 15px 10px;
+        }
+    }
+}
+[dark] {
+    .form__subtitle {
+        color: var(--var-placeholder-grey);
+    }
+}

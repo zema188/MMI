@@ -380,3 +380,13 @@ if(document.querySelectorAll('.selector').length) {
     })
   });
 }
+
+//hashtags swiper
+const swiperHashtags = new Swiper('.swiper-hashtags', {
+  slidesPerView: 'auto',
+  spaceBetween: 8,
+  navigation: {
+    nextEl: '.swiper-hashtags__next',
+    prevEl: '.swiper-hashtags__prev',
+  },
+});

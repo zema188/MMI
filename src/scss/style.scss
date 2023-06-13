@@ -156,6 +156,23 @@ body {
     background: #E8E8EA;
     color: rgba(47, 43, 61, 0.7);
   }
+  &_purple {
+    background: var(--var-purple-bg);
+    color: var(--var-purple-text);
+    border-radius: 41px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.002em;
+    padding: 8px 20px;
+    width: fit-content;
+    white-space: nowrap;
+    @media(max-width:539px) {
+      font-size: 10px;
+      line-height: 12px;
+      padding: 7px 14px;
+    }
+  }
 }
 [dark] {
   .btn {
@@ -260,5 +277,40 @@ body {
       stroke: var(--var-svg-grey);
     }
    } 
+  }
+}
+.btn-swiper_purple {
+  border-radius: 50%;
+  background: var(--var-purple-bg);
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  &::after {
+    content: "";
+    display: block;
+    width: 5.2px;
+    height: 9.16px;
+    background: url(../img/icons/swiper-arrow.svg) 0 0 no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+.btn-swiper_next {
+  transform: translate(0, -50%) rotate(180deg);
+  right: 0;
+  left: auto;
+}
+[dark] {
+  .btn-swiper_purple {
+    &::after {
+      background: url(../img/icons/swiper-arrow_dark.svg) 0 0 no-repeat;
+    }
   }
 }

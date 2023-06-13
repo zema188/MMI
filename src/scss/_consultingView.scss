@@ -1,0 +1,67 @@
+.consulting {
+
+    &__content {
+        display: flex;
+        gap: 21px;
+        @media(max-width: 1023px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text {
+        flex: 1;
+        padding: 30px 35px 30px 30px;
+        @media(max-width: 1023px) {
+            padding: 30px 30px 20px 20px;
+        }
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: var(--var-lead-grey);
+        @media(max-width:539px) {
+            font-size: 13px;
+            line-height: 144%;
+        }
+        & p {
+            &:not(:last-child) {
+                margin-bottom: 21px;
+            }
+        }
+    }
+
+    &__text-title {
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: var(--var-title-grey);
+        margin-bottom: 21px;
+        @media(max-width:539px) {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 14px;
+        }
+    }
+
+    &__form {
+        flex: 0 0 50%;
+        max-width: 339px;
+        padding: 30px;
+        height: fit-content;
+        @media(max-width: 1023px) {
+            padding: 30px 20px 20px 20px;
+            flex: 0 0 100%;
+            max-width: none;
+        }
+    }
+
+    &__form-title {
+        margin-bottom: 30px;
+    }
+
+    &__form-field {
+    }
+}

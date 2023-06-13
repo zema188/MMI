@@ -1,0 +1,38 @@
+.search {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    position: relative;
+    & input {
+        background: transparent;
+        border: 1px solid var(--var-border-input);
+        border-radius: 8px;
+        padding: 8px 20px 10px 42px;
+        width: 100%;
+        color: var(--var-lead-grey);
+        &::placeholder {
+            font-size: 13px;
+            line-height: 144%;
+            letter-spacing: 0.02em;
+            color: var(--var-placeholder-grey);
+        }
+    }
+    & svg {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+        & path {
+            fill: var(--var-svg-grey);
+        }
+    }
+}
+// [dark] {
+//     .search {
+//         & input {
+//             &::placeholder {
+//                 color: var(--var-lead-grey);
+//             }
+//         }
+//     }
+// }

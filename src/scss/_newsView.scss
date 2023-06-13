@@ -1,0 +1,15 @@
+.news {
+
+    &__header {
+        padding: 30px;
+        @media(max-width:1023px) {
+            padding: 20px;
+        }
+    }
+
+    &__header-search {
+    }
+    &__btn-all {
+        margin-top: 21px;
+    }
+}
