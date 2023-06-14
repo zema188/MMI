@@ -1,0 +1,71 @@
+.authorization-view {
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    & .popup {
+        &::before {
+            display: none;
+        }
+    }
+}
+.auth {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 28px;
+        @media (max-width: 539px) {
+            margin-bottom: 35px;
+        }
+    }
+    &__registration-btn, &__authorization-btn {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 97.5%;
+        font-variant: var(--var-svg-grey);
+        gap: 2px;
+        align-items: flex-start;
+
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        @media (max-width: 539px) {
+            margin-bottom: 44px;
+        }
+        & .custom-w {
+            @media (max-width: 539px) {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140.5%;
+                & i {
+                    width: 16px;
+                    height: 16px;
+                    min-width: 16px;
+                    min-height: 16px;
+                }
+            }
+        }
+    }
+    &__btn {
+        width: 100%;
+        font-size: 15px;
+        line-height: 140.5%;
+    }
+    &__forgot-password {
+        color: var(--var-lead-blue);
+        @media (max-width: 539px) {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140.5%;
+        }
+    }
+}

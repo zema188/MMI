@@ -121,7 +121,9 @@ function hedearMobileSwipeClose() {
   
   };
 }
-hedearMobileSwipeClose()
+if(document.querySelectorAll('.header-m').length) {
+  hedearMobileSwipeClose()
+}
 //открытие link_hidden в хедере меню
 
 if(document.querySelectorAll('[open-for]').length) {
@@ -140,7 +142,7 @@ if(document.querySelectorAll('[open-for]').length) {
 // // Size-control
 window.addEventListener('resize', function(event){
     let popups = document.querySelectorAll('.popup')
-    if(window.innerWidth >= 1024) {
+    if(window.innerWidth >= 1024 && mobileMenu !== null) {
       mobileMenu.classList.remove('active')
       bodyScrollLock.enableBodyScroll(mobileMenu)
       for (let i = 0; i < headerMenuBtn.length; i++) {
@@ -390,3 +392,32 @@ const swiperHashtags = new Swiper('.swiper-hashtags', {
     prevEl: '.swiper-hashtags__prev',
   },
 });
+
+// показать скрыть пароль
+
+if(document.querySelectorAll('.eye').length) {
+  const yey = document.querySelectorAll('.eye')
+
+  yey.forEach(yey => {
+    yey.addEventListener('click', function() {
+      console.log(this)
+      togglePassword(this)
+    })
+  });
+
+  function togglePassword(eye) {
+    const field = eye.closest('.input-password-w')
+    const input = field.querySelector('input')
+    const yeyOpen = field.querySelector('.eye_open')
+    const yeyClose = field.querySelector('.eye_close')
+
+    yeyOpen.classList.toggle('active')
+    yeyClose.classList.toggle('active')
+
+    if(!yeyOpen.classList.contains('active')) {
+      input.setAttribute('type', 'text')
+    } else {
+      input.setAttribute('type', 'password')
+    }
+  }
+}
