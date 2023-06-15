@@ -153,6 +153,9 @@ input {
   text-align: right;
   letter-spacing: 0.02em;
   color: #FFFFFF;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   @media(max-width:767px) {
     font-size: 13px;
     line-height: 15px;
@@ -162,11 +165,23 @@ input {
     display: none;
   }
   &_blue {
-    background: #32679B;
+    background: #3a75b1;
+    & .pulse {
+      background-color: rgba(255,255,255, 0.5);
+    }
+    &:hover {
+      background: var(--var-btn-hover-blue);
+    }
   }
   &_grey {
     background: #E8E8EA;
     color: rgba(47, 43, 61, 0.7);
+    &:hover {
+      background: #d8d8dd;
+    }
+    & .pulse {
+      background-color: rgba(255,255,255, 0.5);
+    }
   }
   &_purple {
     background: var(--var-purple-bg);
@@ -179,6 +194,12 @@ input {
     padding: 8px 20px;
     width: fit-content;
     white-space: nowrap;
+    &:hover {
+      background: var(--var-purple-bg-hover);
+    }
+    & .pulse {
+      background-color: rgba(255,255,255, 0.5);
+    }
     @media(max-width:539px) {
       font-size: 10px;
       line-height: 12px;
@@ -186,6 +207,23 @@ input {
     }
   }
 }
+//анимация клика по кнопке
+ .pulse {
+  border-radius: 50%;
+  animation: pulse 0.7s ;
+  transform: scale(0);
+  position: absolute;
+ }
+ @keyframes pulse {
+  to {
+   transform: scale(2);
+   background-color: #fff;
+   opacity: 0;
+  }
+ }
+
+
+
 [dark] {
   .btn {
     &_blue {
@@ -244,6 +282,7 @@ input {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
+  cursor: pointer;
   &::after {
     content: "";
     display: block;

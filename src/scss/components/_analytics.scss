@@ -63,6 +63,9 @@
         width: 100%;
         max-width: 188px;
         text-align: center;
+        &:hover {
+            background: #7eb5e9;
+        }
         @media(max-width:539px) {
             font-size: 12px;
             line-height: 14px;
@@ -90,6 +93,9 @@
         }
         &__item-btn {
             background: #32679b;
+            &:hover {
+                background: #3b7ab9;
+            }
         }
     }
 

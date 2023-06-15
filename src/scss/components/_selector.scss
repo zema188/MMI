@@ -26,6 +26,9 @@
             overflow: auto;
             padding-right: 13px;
         }
+        & .selector__subtitle {
+            cursor: pointer;
+        }
     }
     &.active {
         & .selector__content {
@@ -86,7 +89,9 @@
             cursor: pointer;
             transition: .2s;
         }
-
+        &.active_orange-text {
+            color: var(--var-orange);
+          }
     }
 
     &__content {

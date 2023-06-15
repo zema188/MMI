@@ -47,7 +47,7 @@
     --var-block-bg: rgba(255,255,255,0.8);
 
     //фон хедера
-    --var-header-bg: rgba(255, 255, 255, 0.93);
+    --var-header-bg: rgba(255, 255, 255, 0.9);
 
     --var-red: #EA5455;
 
@@ -56,6 +56,7 @@
 
     //фиолетовый фон
     --var-purple-bg: #E6EAFF;
+    --var-purple-bg-hover: #dde2f8;
     
     //SVG
 
@@ -92,6 +93,11 @@
 
     // INPUT PLACEHOLDER
     --var-placeholder-grey: #BEBDBF;
+
+    //кнопки ховеры
+
+    //голубая кнопка
+    --var-btn-hover-blue: rgb(38, 93, 148);
 }
 
 [dark] {
@@ -183,6 +189,7 @@
     
     //фиолетовый фон
     --var-purple-bg: #393B63;
+    --var-purple-bg-hover: #40426e;
 
     // INPUT PLACEHOLDER
     --var-placeholder-grey: #BEBDBF;

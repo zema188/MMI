@@ -74,6 +74,7 @@
         &::after {
             content: "";
             display: none;
+            // background: url(../img/icons/col-arrow.svg) 0 0 no-repeat;
             background: url(../img/icons/col-arrow.svg) 0 0 no-repeat;
             width: 37px;
             height: 55px;
@@ -88,7 +89,12 @@
             }
         }
     }
-
+    &__col-content {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
     &__col-item-btn {
         border-radius: 25px;
         padding: 18px 55px 18px 37px;

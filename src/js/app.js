@@ -336,6 +336,19 @@ if(document.querySelectorAll('.lang').length) {
   const langBtn = lang.querySelector('.lang__top')
 
   langBtn.onclick = () => lang.classList.toggle('active')
+  
+
+  //смена языка
+  const langItem = document.querySelectorAll('.lang__list-item')
+  langItem.forEach(btn => {
+    btn.onclick = function() {
+      changerActive(langItem)
+      if(this.classList.contains('active')) {
+      } else {
+        this.classList.add('active')
+      }
+    }
+  });
 }
 
 // analytics смена активного блока 
@@ -400,7 +413,6 @@ if(document.querySelectorAll('.eye').length) {
 
   yey.forEach(yey => {
     yey.addEventListener('click', function() {
-      console.log(this)
       togglePassword(this)
     })
   });
@@ -420,4 +432,98 @@ if(document.querySelectorAll('.eye').length) {
       input.setAttribute('type', 'password')
     }
   }
+}
+
+//анимация клика по кнопке
+if(document.querySelectorAll('.btn_animation').length) {
+  let buttons = document.getElementsByClassName('btn_animation'),
+  forEach = Array.prototype.forEach;
+
+forEach.call(buttons, function (b) {
+  b.addEventListener('click', addElement);
+});
+
+function addElement(e) {
+let pulse = this.querySelector('.pulse')
+if(pulse) {
+  this.removeChild(pulse)
+}
+let addDiv  = document.createElement('div'),
+      mValue  = Math.max(this.clientWidth, this.clientHeight),
+      rect    = this.getBoundingClientRect();
+      sDiv    = addDiv.style,
+      px      = 'px';
+      zInxed = '0'
+
+  sDiv.width  = sDiv.height = mValue + px;
+  sDiv.left  = e.clientX - rect.left - (mValue / 2) + px;
+  sDiv.top   = e.clientY - rect.top - (mValue / 2) + px;
+
+  addDiv.classList.add('pulse');
+  this.appendChild(addDiv);
+}
+}
+
+
+//selection__col-item btn переключение активной кнопки и колонок
+
+if(document.querySelectorAll('.selection__col-item-btn').length) {
+  //первая колонка с кнопками
+  const selectionBtn = document.querySelectorAll('.selection__col-item-btn')
+
+  selectionBtn.forEach(btn => {
+
+    btn.onclick = function() {
+
+      if(this.classList.contains('active')) {
+        changerActive(selectionBtn)
+        toggleColContent('col__content-second', false)
+        toggleColContent('col__content-third', false)
+        console.log(selectionBtnLead)
+        changerActive(selectionBtnLead)
+        return
+
+      } else {
+        changerActive(selectionBtn)
+        this.classList.add('active')
+        toggleColContent('col__content-second', true)
+      }
+
+    }
+
+  });
+
+  //вторая колонка с кнопками
+  const selectionBtnLead = document.querySelectorAll('.selection__col-item-lead')
+  selectionBtnLead.forEach(btn => {
+    
+    btn.onclick = function() {
+
+      if(this.classList.contains('active')) {
+        changerActive(selectionBtnLead)
+        toggleColContent('col__content-third', false)
+        return
+
+      } else {
+        changerActive(selectionBtnLead)
+        this.classList.add('active')
+        toggleColContent('col__content-third', true)
+      }
+
+    }
+
+  });
+
+    //функция переключения active для selection__col-content 
+    function toggleColContent(col, type) {
+      const hiddenColContent = document.querySelector(`.${col}`)
+      if(hiddenColContent === null)
+      return
+      if(type) {
+        hiddenColContent.classList.add('active')
+      } else {
+        hiddenColContent.classList.remove('active')
+      }
+    }
+  
 }
