@@ -12,6 +12,20 @@
             display: none;
         }
     }
+    & .auth__content-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 33px;
+        & .logo {
+            margin-bottom: 0;
+        }
+    }
+    & .popup__title {
+        & span {
+            display: inline-block;
+        }
+    }
 }
 .auth {
     &__top {
@@ -66,6 +80,18 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 140.5%;
+        }
+    }
+    &__link-btn {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        color: var(--var-lead-blue);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 140.5%;
+        @media(max-width: 539px) {
+            font-size: 12px;
         }
     }
 }

@@ -17,26 +17,41 @@
 			<div class="popup popup-modal active">
 				<div class="popup__body">
 					<div class="popup__content block">
-						<div class="popup__logo logo">
-							<svg width="66" height="35" viewBox="0 0 66 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0 0.0186768H59.3365L66 6.73519V34.5607H0V0.0186768Z" fill="#FF5421"></path>
-								<path d="M56.0528 23.1224H47.7432V25.5462H56.0528V23.1224Z" fill="white"></path>
-								<path d="M49.9727 21.3046V12.2156H53.8235V21.3046H49.9727Z" fill="white"></path>
-								<path d="M56.0528 8.17603H47.7432V10.5998H56.0528V8.17603Z" fill="white"></path>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.64062 8.17603V25.3442H13.0861V8.17603H9.64062ZM14.5041 18.8809V12.4176L17.9496 18.8809L23.0176 8.5855V8.17603H23.2192H24.4352H26.4631V25.3442H23.0176V15.6795L19.3683 22.5165H16.5309L14.5041 18.8809Z" fill="white"></path>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M45.5137 8.17603V25.3442H42.0682V8.17603H45.5137ZM40.6494 18.8809V12.4176L37.2039 18.8809L32.1375 8.58862V8.17603H31.9344H30.7183H28.692V25.3442H32.1375V15.6823L35.7852 22.5165H38.6227L40.6494 18.8809Z" fill="white"></path>
-							</svg>
+						<div class="auth__content-top">
+							<div class="popup__logo logo">
+								<svg width="66" height="35" viewBox="0 0 66 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 0.0186768H59.3365L66 6.73519V34.5607H0V0.0186768Z" fill="#FF5421"></path>
+									<path d="M56.0528 23.1224H47.7432V25.5462H56.0528V23.1224Z" fill="white"></path>
+									<path d="M49.9727 21.3046V12.2156H53.8235V21.3046H49.9727Z" fill="white"></path>
+									<path d="M56.0528 8.17603H47.7432V10.5998H56.0528V8.17603Z" fill="white"></path>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M9.64062 8.17603V25.3442H13.0861V8.17603H9.64062ZM14.5041 18.8809V12.4176L17.9496 18.8809L23.0176 8.5855V8.17603H23.2192H24.4352H26.4631V25.3442H23.0176V15.6795L19.3683 22.5165H16.5309L14.5041 18.8809Z" fill="white"></path>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M45.5137 8.17603V25.3442H42.0682V8.17603H45.5137ZM40.6494 18.8809V12.4176L37.2039 18.8809L32.1375 8.58862V8.17603H31.9344H30.7183H28.692V25.3442H32.1375V15.6823L35.7852 22.5165H38.6227L40.6494 18.8809Z" fill="white"></path>
+								</svg>
+							</div>
+							<div class="lang close-out">
+								<div class="lang__top">
+									<img src="./img/icons/usa.svg" alt="usa-lang">
+								</div>
+								<div class="lang__list  block">
+									<div class="lang__list-item active btn btn_animation">
+										Русский
+									</div>
+									<div class="lang__list-item btn btn_animation">
+										Английский
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="auth__top">
 							<div class="popup__title">
-								Регистрация
+								Авторизация
 							</div>
-							<a href="authorization.html" class="auth__registration-btn">
+							<a href="registration.html" class="auth__registration-btn">
 								<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.15128 3.36365C8.15128 4.65281 7.10734 5.69674 5.81818 5.69674C4.52903 5.69674 3.48509 4.65281 3.48509 3.36365C3.48509 2.07449 4.52903 1.03056 5.81818 1.03056C7.10734 1.03056 8.15128 2.07449 8.15128 3.36365ZM0.576 10.6364C0.576 10.3643 0.707723 10.0834 1.02668 9.78897C1.34955 9.49098 1.82435 9.21972 2.39511 8.99107C3.53755 8.53341 4.91928 8.30329 5.81818 8.30329C6.71709 8.30329 8.09882 8.53341 9.24126 8.99107C9.81202 9.21972 10.2868 9.49098 10.6097 9.78897C10.9286 10.0834 11.0604 10.3643 11.0604 10.6364V11.3637C11.0604 11.4455 10.991 11.5149 10.9091 11.5149H0.727273C0.645389 11.5149 0.576 11.4455 0.576 11.3637V10.6364Z" stroke="#726F7B" stroke-width="1.152"/>
 									<path d="M13.8732 4.45881H15.5224V5.39204H13.8732V7.03267H12.94V5.39204H11.2908V4.45881H12.94V2.79687H13.8732V4.45881Z" fill="#726F7B"/>
 								</svg>
-								Авторизация
+								Регистрация
 							</a>
 						</div>
 						<div class="field">
@@ -60,8 +75,20 @@
 							</svg>
 							<input type="password">
 						</div>
+						<div class="auth__bottom">
+							<label class="custom-w">
+								<div class="custom-w-btn">
+									<input type="checkbox">
+									<i class="custom-checkbox"></i>
+									<span>Запомнить меня</span>
+								</div>
+							</label>
+							<a class="auth__forgot-password" href="#">
+								Забыли пароль?
+							</a>
+						</div>
 						<button class="auth__btn btn btn_blue btn_animation">
-							Зарегистрироваться
+							Войти
 						</button>
 					</div>
 				</div>
